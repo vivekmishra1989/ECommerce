@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable">
+  <article class="slds-card">
+    <c:vlocity_catalog_component/>
+  </article>
+</aura:component>

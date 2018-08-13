@@ -1,0 +1,24 @@
+<template>
+    <div class="ecom-catalog-wrapper">
+        <div class="ecom-catalog-scrollable">
+            <template for:each={catalogMenu} for:item="catalog" for:index="index">
+                <div key={catalog.name} class="ecom-catalog-item" id={index} onclick={onCatalogClick}>
+                    <div class="nds-media__figure">
+                        <img if:false={catalog.active} key={catalog.name} src={catalog.img1} alt={catalog.name} width=70/>
+                        <img if:true={catalog.active} key={catalog.name} src={catalog.img2} alt={catalog.name} width=70/>
+                        <div key={catalog.name}>{catalog.name}</div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+    <div class="ecom-mobile-catalog-wrapper">
+        <img class = "ecom-menu-icon" src="https://png.icons8.com/ios/96/000000/menu-filled.png" onclick={toggleCatalogMobileMenu}></br>
+        <div class="ecom-mobile-menu-list">
+            <img src="https://png.icons8.com/dotty/96/000000/multiply.png" class="ecom-menu-icon" onclick={toggleCatalogMobileMenu}>
+            <ul>
+                <li for:each={catalogMenu} for:item="catalog" for:index="index" key={catalog.name}>{catalog.name}</li>
+            </ul>
+        </div>
+    </div>
+</template>

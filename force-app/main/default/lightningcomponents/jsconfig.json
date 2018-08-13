@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c-helloworld": [
+                "helloworld/helloworld.js"
+            ],
+            "c-helloworldevent": [
+                "helloworldevent/helloworldevent.js"
+            ],
+            "c-helloworldextended": [
+                "helloworldextended/helloworldextended.js"
+            ],
+            "c-vlocity_catalog_component": [
+                "vlocity_catalog_component/vlocity_catalog_component.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}

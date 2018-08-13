@@ -1,0 +1,48 @@
+{
+  "name": "vlocity-lwc",
+  "version": "0.0.1",
+  "description": "Vlocity Lightning Web Components Samples",
+  "scripts": {
+    "lint": "npm run lint:lwc && npm run lint:aura",
+    "lint:lwc": "eslint --max-warnings 0 force-app/main/default/lightningcomponents ui-tests/tests",
+    "lint:aura": "sfdx force:lightning:lint force-app --exit",
+    "test": "npm run lint && npm run test:unit && npm run test:ui",
+    "test:ui": "wdio ui-tests/wdio.conf.js",
+    "test:unit": "lts-jest test",
+    "prettier": "prettier --write '**/*.js'",
+    "prettier:staged": "./bin/prettier-staged.js",
+    "postinstall": "babel-node bin/check-version.js"
+  },
+  "author": "vlocity.com",
+  "engines": {
+    "node": ">= 8.9.4",
+    "npm": ">= 5.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "eslint": "4.16.0",
+    "eslint-plugin-lwc": "0.3.2",
+    "eslint-plugin-webdriverio": "^1.0.1",
+    "husky": "^0.15.0-rc.8",
+    "lts-jest": "^0.1.5",
+    "prettier": "1.10.2",
+    "selenium-standalone": "^6.13.0",
+    "semver": "^5.5.0",
+    "shelljs": "^0.8.1",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "wdio-visual-regression-service": "^0.8.0",
+    "webdriverio": "^4.12.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier:staged && npm run lint"
+    }
+  }
+}
