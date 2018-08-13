@@ -65,7 +65,7 @@ We want you to enjoy developing Lightning web components as much as we do, so we
 
 ```bash
 cd path/to/your/sfdx/projects
-git clone https://github.com/forcedotcom/sfdx-lwc-samples.git
+git clone https://github.com/paramesh-anakapalli/ECommerce.git
 cd ECommerce
 ```
 
