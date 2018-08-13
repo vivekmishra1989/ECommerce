@@ -1,4 +1,4 @@
-# Lightning Web Components Examples & Playground [![CircleCI](https://circleci.com/gh/forcedotcom/sfdx-lwc-samples/tree/master.svg?style=svg&circle-token=8a2145726cca012a413c1015abd94914571fc7c3)](https://circleci.com/gh/forcedotcom/sfdx-lwc-samples/tree/master)
+# Lightning Web Components ECommerce 
 
 This repository provides instructive samples for Lightning Web Components. The sample components illustrate basic techniques and recommended practices. The samples are commented, and we welcome feedback, questions, and pull requests.
 
@@ -66,7 +66,7 @@ We want you to enjoy developing Lightning web components as much as we do, so we
 ```bash
 cd path/to/your/sfdx/projects
 git clone https://github.com/forcedotcom/sfdx-lwc-samples.git
-cd sfdx-lwc-samples
+cd ECommerce
 ```
 
 Install npm dependencies.
@@ -128,7 +128,7 @@ In VS Code, press Command + Shift P to open the Command Palette. Enter `sfdx o` 
 You can also run this command from the command line.
 
 ```bash
-sfdx force:org:open -p /one/one.app#/n/welcome
+sfdx force:org:open -p /one/one.app#/n/helloworld
 ```
 
 This command opens a web browser, connects to your scratch org, and logs in. If the Lightning Web Components app isn't displayed, select it from the App Launcher. Follow the on-screen instructions to build your first Lightning web component.
